@@ -10,7 +10,9 @@ def teams(candidato):
         processos = []
 
         for processo in equipe.processos.all():
-            processos.append({"id": processo.id, "name": processo.nome})
+            processos.append({"id": processo.id,
+                              "name": processo.nome,
+                              "end": processo.finalizado_em })
 
         teams.append({"id": equipe.id, "name": equipe.nome, "processes": processos})
 
