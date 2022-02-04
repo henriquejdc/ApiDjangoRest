@@ -9,6 +9,8 @@ class Equipes(models.Model):
                                    max_length=20,
                                    choices=(('front-end','Front-End'),('back-end','Back-End')),
                                    default='front-end')
+    # Deixei podendo ser nula/branco pela frase "pode ser" e
+    # Equipe pode ter candidatos, sem ter ainda um processo ainda.
     processos = models.ManyToManyField(Processos, null=True, blank=True)
     criado_em = models.DateField(auto_now_add=True)
 

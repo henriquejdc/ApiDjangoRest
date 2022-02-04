@@ -11,11 +11,24 @@ def approved_candidates(request):
 
     front = []
     back = []
+
     for candidato in models.Candidatos.objects.filter(equipes__tipo_equipe='front-end'):
+        teams = []
+
+        for equipe in candidatos.equipes.all():
+            processos = []
+
+            for processo in candidatos.processos.all():
+                processos.append({"id": processo.id, "name": processo.nome})
+
+            teams.append({"id": equipe.id, "name": equipe.nome, "processes": processos})
+
         front.append({"id": candidato.id,
                       "name": candidato.nome,
                       "contribution": candidato.contribuicao,
+                      "teams": teams
                     })
+
     for candidato in models.Candidatos.objects.filter(equipes__tipo_equipe='back-end'):
         back.append({"id": candidato.id,
                       "name": candidato.nome,

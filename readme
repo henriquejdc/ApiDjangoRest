@@ -22,4 +22,9 @@ Models Migrations:
 Run Server:
 - python manage.py runserver
 
-Api Root disponível em seu localhost contendo as URLs da API e suas funcionalidades
+Api Root disponível em seu localhost contendo as URLs da API e suas funcionalidades:
+
+Para acesssar os métodos delete / put basta adicionar o {id}/ na url desejada do model
+Ex: "http://127.0.0.1:8000/candidatos/1/"
+
+Métodos get / post estão explícitos na própria url na Api Root
