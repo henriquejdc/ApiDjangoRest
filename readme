@@ -1,0 +1,25 @@
+Versões usadas:
+Python 3.10.2
+Django 4.0.2
+DjangoRestFramework 3.12.2
+
+Projeto Criado usando Pycharm
+
+Ativar env no Windows: venv\Scripts\activate
+
+Instalar:
+- Python e Django
+- pip install djangorestframework
+- pip install pytz (Caso Erro)
+
+Criar projeto: django-admin startproject selecao .
+Criar app: django-admin startapp equipes
+
+Models Migrations:
+- python manage.py makemigrations
+- python manage.py migrate
+
+Run Server:
+- python manage.py runserver
+
+Api Root disponível em seu localhost contendo as URLs da API e suas funcionalidades
