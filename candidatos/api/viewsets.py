@@ -31,8 +31,7 @@ class AprovadosViewSet(viewsets.ViewSet):
         full = []
         candidatos_front = models.Candidatos.objects.filter(equipes__tipo_equipe='front-end')
         candidatos_back = models.Candidatos.objects.filter(equipes__tipo_equipe='back-end')
-        print(candidatos_back)
-        print(candidatos_front)
+
         for candidato in candidatos_front.exclude(id__in=candidatos_back.values_list('id', flat=True)):
             front.append({"id": candidato.id,
                           "name": candidato.nome,
