@@ -12,6 +12,9 @@ Instalar:
 - pip install djangorestframework
 - pip install pytz (Caso Erro)
 
+OU 
+- pip install -r requeriments.txt
+
 Criar projeto: django-admin startproject selecao .
 Criar app: django-admin startapp equipes
 
